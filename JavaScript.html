@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        #message {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Number Loop</h2>
+    <p id="message">Enter a number in the prompt box.</p>
+
+    <script>
+        var num;
+        do {
+            num = parseInt(prompt("Enter a number:"));
+            
+            if (isNaN(num)) {
+                alert("Invalid input! Please enter a valid number.");
+            } else if (num > 15) {
+                document.getElementById("message").innerHTML = "Number is greater than 15!";
+                break;
+            } else {
+                alert("The number is less than or equal to 15. Try again!");
+            }
+        } while (num <= 15 || isNaN(num));
+    </script>
+</body>
+</html>
